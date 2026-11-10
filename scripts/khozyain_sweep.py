@@ -18,18 +18,25 @@ HDR = {"Authorization": f"token {os.environ['GH_TOKEN']}",
        "Accept": "application/vnd.github+json", "User-Agent": "khozyain-sweep"}
 
 
-def req(path):
+def req(path, _tries=3):
+    import http.client, time
     r = urllib.request.Request(API + path)
     for k, v in HDR.items():
         r.add_header(k, v)
-    try:
-        with urllib.request.urlopen(r, timeout=40) as resp:
-            return resp.status, json.loads(resp.read() or b"{}")
-    except urllib.error.HTTPError as e:
+    last = None
+    for i in range(_tries):
         try:
-            return e.code, json.loads(e.read() or b"{}")
-        except Exception:
-            return e.code, {}
+            with urllib.request.urlopen(r, timeout=40) as resp:
+                return resp.status, json.loads(resp.read() or b"{}")
+        except urllib.error.HTTPError as e:
+            try:
+                return e.code, json.loads(e.read() or b"{}")
+            except Exception:
+                return e.code, {}
+        except (urllib.error.URLError, http.client.RemoteDisconnected, TimeoutError, ConnectionError, OSError) as e:
+            last = e
+            time.sleep(2 * (i + 1))  # транзиент сети — ретрай, не падение
+    return 0, {"message": f"сеть: {last}"}
 
 
 def legit_states():
