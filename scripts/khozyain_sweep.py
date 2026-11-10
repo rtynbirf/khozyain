@@ -11,6 +11,7 @@
 Токен — только env GH_TOKEN. Секреты в вывод не попадают.
 """
 import base64, json, os, re, sys, urllib.request, urllib.error
+from urllib.parse import quote as _q
 
 API = "https://api.github.com"
 HDR = {"Authorization": f"token {os.environ['GH_TOKEN']}",
@@ -76,7 +77,7 @@ def main():
         for f in (files if st == 200 and isinstance(files, list) else []):
             if not f["name"].endswith((".yml", ".yaml")):
                 continue
-            stc, fc = req(f"/repos/{full}/contents/.github/workflows/{f['name']}")
+            stc, fc = req(f"/repos/{full}/contents/.github/workflows/{_q(f['name'])}")
             if stc != 200:
                 continue
             raw = base64.b64decode(fc.get("content", ""))
