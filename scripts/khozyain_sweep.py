@@ -92,9 +92,11 @@ def main():
                 if m:
                     val = m.group(1).strip()
                     if val.startswith("["):
+                        if "]" in val:
+                            val = val[:val.index("]") + 1]   # отрезать inline-комментарий после ]
                         vals = [v.strip().strip("'\"") for v in val.strip("[]").split(",")]
                     else:
-                        vals = [val.strip("'\"")]
+                        vals = [re.split(r"\s+#", val)[0].strip("'\"")]
                     for v in vals:
                         if v and "*" not in v and v not in names:
                             alarms.append(f"I2 DEAD_TRIGGER {full} [{f['name']}] ветка '{v}' не существует")
