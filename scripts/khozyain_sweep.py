@@ -45,7 +45,7 @@ def legit_states():
 
 def main():
     strict = "--strict" in sys.argv
-    legit = legit_states()
+    legit = {s.split("/")[-1] for s in legit}  # реестр хранит короткие имена
     alarms, notes = [], []
 
     st, repos = req("/user/repos?per_page=100&affiliation=owner,collaborator")
