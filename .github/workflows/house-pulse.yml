@@ -1,0 +1,52 @@
+name: Пульс дома (self-check слоя)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "3 6 * * 1"   # понедельник 06:03 UTC — еженедельный пульс слоя
+
+permissions:
+  contents: read
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+
+      - name: «Закон проходит свою приёмку» — синтаксис слоя
+        run: |
+          python3 -m py_compile scripts/khozyain_sweep.py
+          python3 - <<'EOF'
+          import re
+          zakon = open('docs/ZAKON_DOMA.md', encoding='utf-8').read()
+          readme = open('README.md', encoding='utf-8').read()
+          assert 'M = (Q, Σ, δ, q₀, F)' in zakon, 'автомат не описан'
+          assert 'REJECT' in zakon and 'ПОКОЙ' in zakon, 'нет терминальной семантики'
+          for inv in ['I1', 'I2', 'I3', 'I4', 'I5', 'I6', 'I7']:
+              assert inv in readme, f'инвариант {inv} отсутствует в README'
+          print('приёмка слоя: ACCEPT')
+          EOF
+
+      - name: «Реестр законных состояний валиден»
+        run: |
+          python3 - <<'EOF'
+          for line in open('legit_open_states.txt', encoding='utf-8'):
+              line = line.strip()
+              if not line or line.startswith('#'):
+                  continue
+              parts = line.split('|')
+              assert len(parts) == 4, f'формат: repo|объект|причина|дедлайн — нарушение: {line[:60]}'
+          print('реестр: OK')
+          EOF
+
+      - name: «Сентинел пустых файлов»
+        run: |
+          empties=$(find . -type f -size 0 -not -path "./.git/*" | grep -v -E "\.(gitkeep|nojekyll)$" || true)
+          if [ -n "$empties" ]; then echo "ПУСТЫЕ ФАЙЛЫ (fail-closed): $empties"; exit 1; fi
+          echo "сентинел чист"
