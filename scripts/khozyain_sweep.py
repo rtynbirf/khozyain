@@ -61,13 +61,14 @@ def main():
 
     for r in own:
         full = r["full_name"]; db = r["default_branch"]
+        short = full.split("/")[-1]
         st, iss = req(f"/repos/{full}/issues?state=open&per_page=100")
         if st == 200:
             real = [i for i in iss if "pull_request" not in i]
-            if real and full not in legit:
+            if real and short not in legit:
                 alarms.append(f"I3 OPEN_STATE {full}: issues {len(real)}")
         st, prs = req(f"/repos/{full}/pulls?state=open&per_page=50")
-        if st == 200 and prs and full not in legit:
+        if st == 200 and prs and short not in legit:
             alarms.append(f"I3 OPEN_STATE {full}: PR {len(prs)}")
 
         st, wfs = req(f"/repos/{full}/actions/workflows?per_page=100")
@@ -75,7 +76,7 @@ def main():
             wid, wname = wf["id"], wf["name"]
             st, runs = req(f"/repos/{full}/actions/workflows/{wid}/runs?per_page=1")
             runs = runs.get("workflow_runs", []) if st == 200 else []
-            if runs and runs[0]["head_branch"] == db and runs[0]["conclusion"] == "failure" and full not in legit:
+            if runs and runs[0]["head_branch"] == db and runs[0]["conclusion"] == "failure" and short not in legit:
                 alarms.append(f"I1 RED_MAIN {full} [{wname}] run {runs[0]['id']}")
 
         st, files = req(f"/repos/{full}/contents/.github/workflows")
