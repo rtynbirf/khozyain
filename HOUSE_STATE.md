@@ -54,3 +54,59 @@
 
 **Итог:** инварианты I1–I4 держатся; I5 — этот срез + TH-KH-01; I6, I7 — без
 нарушений. Дом в ПОКОЕ.
+
+## Срез №2 · 2026-11-16 · Полимат=Хозяин (такт ×28: снятие красных «пустого поля», приёмка Dependabot-волны)
+
+**Масштаб:** 66 тел (27 живых / 39 архив). Замер khozyain_sweep.py на входе: I1 ×3
+RED_MAIN «Dependabot Updates», I2 чист, I3 чист (31 открытый PR — все в архивных телах,
+мёртвый вес по канону ×23, замерщик живых не считает), I4 = 0.
+
+**Тревоги среза и их судьба:**
+
+| Тревога | Репо | Судьба |
+|---|---|---|
+| I1 RED_MAIN «Dependabot Updates» | edinyy-svod | **снято 2026-11-16**: красный run 43705363029 был честным «на пустом поле» (×26); еда появилась (воркфлоу W7/W8, SHA-запины). Такт ×28: аддитивный комментарий в dependabot.yml (43e9659, +1/−0) — джоб перезапущен: Update #1705797041 success; Dependabot нашёл 2 обновления запиненных экшенов → PR #8 (С128 проверен по диффу: пины — полные SHA40; zizmor success ×2, CodeQL neutral) → squash cc9bef4; main: zizmor/Scorecard/Push success |
+| I1 RED_MAIN «Dependabot Updates» | hologram | **снято 2026-11-16**: такт ×28 (2b96cd1, +1/−0) → Update #1705797065 success → PR #1 (3 обновления, С128 OK) → squash 1eef333; main: Push/Scorecard/zizmor/ГОЛОГРАММА success |
+| I1 RED_MAIN «Dependabot Updates» | polymath-core | **снято 2026-11-16**: такт ×28 (7e41770, +1/−0) → Update #1705797131 success → PR #1 (2 обновления, С128 OK) → squash d890f58; main: Push/zizmor/Scorecard success |
+| I4 UNREAD_NOTIFICATION ×3 | hologram, polymath-core, edinyy-svod | **погашено после фиксации** (G3): причина review_requested по трём Dependabot PR; состояния закрыты мёржем, фиксация — этот срез |
+
+**Примечания среза:**
+- 31 открытый Dependabot PR в 19 архивных телах — мёртвый вес по канону ×23 («тело в
+  архиве = долг умер с телом»), замерщик живых их не считает. Действий не требует.
+- Ворклог H-PE11-PHOENIX в архиве (запечатан TH-R12-04, 2026-11-14): живая хроника
+  мандатов — РЕЕСТР index (волны ×25–×28) + этот файл. TH-R12-05 внесён в архивный
+  ворклог унивел-циклом (unarchive → append → archive) — буква I5 соблюдена.
+- Мировая практика Dependabot (группировка в один PR, weekly, SHA-пины) — уже в конфигах
+  дома; API-триггера джоба нет (POST /dependabot/updates 404, rerun 403), документированный
+  путь — пуш в dependabot.yml (dependabot-core#2980, docs.github.com).
+
+**Итог среза:** дом в ПОКОЕ по I1–I4 (strict-замер на выходе: 0 тревог). I5 — этот срез +
+TH-R12-05 в H-PE11-PHOENIX. I6, I7 — без нарушений.
+
+## Срез №2 · 2026-11-16 · Полимат=Хозяин (такт ×28: снятие красных «пустого поля», приёмка Dependabot-волны)
+
+**Масштаб:** 66 тел (27 живых / 39 архив). Замер khozyain_sweep.py на входе: I1 ×3
+RED_MAIN «Dependabot Updates», I2 чист, I3 чист (31 открытый PR — все в архивных телах,
+мёртвый вес по канону ×23, замерщик живых не считает), I4 = 0.
+
+**Тревоги среза и их судьба:**
+
+| Тревога | Репо | Судьба |
+|---|---|---|
+| I1 RED_MAIN «Dependabot Updates» | edinyy-svod | **снято 2026-11-16**: красный run 43705363029 был честным «на пустом поле» (×26); еда появилась (воркфлоу W7/W8, SHA-запины). Такт ×28: аддитивный комментарий в dependabot.yml (43e9659, +1/−0) — джоб перезапущен: Update #1705797041 success; Dependabot нашёл 2 обновления запиненных экшенов → PR #8 (С128 проверен по диффу: пины — полные SHA40; zizmor success ×2, CodeQL neutral) → squash cc9bef4; main: zizmor/Scorecard/Push success |
+| I1 RED_MAIN «Dependabot Updates» | hologram | **снято 2026-11-16**: такт ×28 (2b96cd1, +1/−0) → Update #1705797065 success → PR #1 (3 обновления, С128 OK) → squash 1eef333; main: Push/Scorecard/zizmor/ГОЛОГРАММА success |
+| I1 RED_MAIN «Dependabot Updates» | polymath-core | **снято 2026-11-16**: такт ×28 (7e41770, +1/−0) → Update #1705797131 success → PR #1 (2 обновления, С128 OK) → squash d890f58; main: Push/zizmor/Scorecard success |
+| I4 UNREAD_NOTIFICATION ×3 | hologram, polymath-core, edinyy-svod | **погашено после фиксации** (G3): причина review_requested по трём Dependabot PR; состояния закрыты мёржем, фиксация — этот срез |
+
+**Примечания среза:**
+- 31 открытый Dependabot PR в 19 архивных телах — мёртвый вес по канону ×23 («тело в
+  архиве = долг умер с телом»), замерщик живых их не считает. Действий не требует.
+- Ворклог H-PE11-PHOENIX в архиве (запечатан TH-R12-04, 2026-11-14): живая хроника
+  мандатов — РЕЕСТР index (волны ×25–×28) + этот файл. TH-R12-05 внесён в архивный
+  ворклог унивел-циклом (unarchive → append → archive) — буква I5 соблюдена.
+- Мировая практика Dependabot (группировка в один PR, weekly, SHA-пины) — уже в конфигах
+  дома; API-триггера джоба нет (POST /dependabot/updates 404, rerun 403), документированный
+  путь — пуш в dependabot.yml (dependabot-core#2980, docs.github.com).
+
+**Итог среза:** дом в ПОКОЕ по I1–I4 (strict-замер на выходе: 0 тревог). I5 — этот срез +
+TH-R12-05 в H-PE11-PHOENIX. I6, I7 — без нарушений.
