@@ -2,7 +2,7 @@
  "hologram": 1,
  "root": "c223bd4a2f6a56783c1fbdb1b1f671fa61c3150ecf320c82796ea5763043a696",
  "n": 73,
- "storage": 68,
+ "storage": 36,
  "r": 3,
  "self": {
   "name": "khozyain",
@@ -330,10 +330,28 @@
    "cluster": ""
   },
   {
+   "name": "github-doctrine",
+   "desc": "КНИГА ДОКТРИНЫ",
+   "lang": "Python",
+   "cluster": ""
+  },
+  {
+   "name": "karta",
+   "desc": "КАРТА ВСЕЛЕННОЙ rtynbirf: генерируется из живых данных API, ни одного выдуманного числа. СВЕРКА = CRITIC: расхождение карты с территорией ловится, а не прячется. Ритуалы: СВЕРКА / ВЫЖИВАНИЕ / НОЧЬ-БЕЗ",
+   "lang": "Python",
+   "cluster": ""
+  },
+  {
    "name": "polymath-atlas-v107",
    "desc": "POLYMATH-ATLAS v107.1-FINAL — honest evidence-audit framework in Lean 4. VERIFIED ENGINEERING FRAMEWORK (prototype), not a theorem prover. Open verification protocol in README.",
    "lang": "Lean",
    "cluster": "ATLASES"
+  },
+  {
+   "name": "rumu",
+   "desc": "⚡ СИНГУЛЯР РУМУ — Sovereign BL/GL Streaming. P2P+autopilot, NO corporate. 249 тайтлов. Держатель имени; код — веткой rumu в singulyar. (Восстановлен Полиматом из пломбы polimat-vault 2026-11-08)",
+   "lang": "Python",
+   "cluster": "SINGULAR"
   }
  ]
 }
