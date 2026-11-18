@@ -1,14 +1,14 @@
 # ХОЗЯИН ДОМА
 
 <div align="center">
-  <img src="banner.png" width="100%" alt="Штандарт khozyain: обсидиан и расплавленное золото, кузня rtynbirf" />
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/khozyain@main/banner.png" width="100%" alt="Штандарт khozyain: обсидиан и расплавленное золото, кузня rtynbirf" />
 </div>
 
 <!--ФОРЖ:МУЗА:НАЧАЛО-->
 <div align="center">
-  <img src="repo-muse.svg" width="100%" alt="Муза khozyain: мастерская ТЁРНЕР · ВИХРЬ, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/khozyain@main/repo-muse.svg" width="100%" alt="Муза khozyain: мастерская ТЁРНЕР · ВИХРЬ, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
   <br/>
-  <img src="forge-divider.svg" width="62%" alt="делитель мастерской ТЁРНЕР · ВИХРЬ" />
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/khozyain@main/forge-divider.svg" width="62%" alt="делитель мастерской ТЁРНЕР · ВИХРЬ" />
 </div>
 <!--ФОРЖ:МУЗА:КОНЕЦ-->
 
