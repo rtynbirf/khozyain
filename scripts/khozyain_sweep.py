@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ХОЗЯИН ДОМА · замерщик состояния аккаунта (read-only, идемпотентный).
 
-Проверяет инварианты I1–I4 (README):
+Проверяет инварианты I1–I4 (README); I2 включает гробовую тишину пульса Дозиона:
   I1 красные main: последний прогон каждого workflow на default-ветке
   I2 мёртвые триггеры: значения on.push.branches указывают на существующие ветки
   I3 открытые состояния: issues/PR вне реестра legit_open_states.txt
@@ -10,7 +10,7 @@
 Выход: таблица на stdout + маркеры ALARM; --strict → exit 1 при тревогах.
 Токен — только env GH_TOKEN. Секреты в вывод не попадают.
 """
-import base64, json, os, re, sys, urllib.request, urllib.error
+import base64, datetime, json, os, re, sys, urllib.request, urllib.error
 from urllib.parse import quote as _q
 
 API = "https://api.github.com"
@@ -108,6 +108,24 @@ def main():
                     for v in vals:
                         if v and "*" not in v and v not in names:
                             alarms.append(f"I2 DEAD_TRIGGER {full} [{f['name']}] ветка '{v}' не существует")
+
+    # I2 · гробовая тишина: дозор Дозиона обязан дышать (мир: dead man's switch,
+    # healthchecks.io; хвост волны 2026-11-18 «аларм-однажды, если heartbeat старше
+    # 14 дней»). Тишина пульса = та же тихая смерть автоматики, что и мёртвый триггер.
+    st, hb = req("/repos/rtynbirf/.github/contents/dosezor/heartbeat.json")
+    if st == 200:
+        try:
+            beat = json.loads(base64.b64decode(hb.get("content", "")).decode())["beat"]
+            bdt = datetime.datetime.fromisoformat(beat)
+            if bdt.tzinfo is None:
+                bdt = bdt.replace(tzinfo=datetime.timezone.utc)
+            age = datetime.datetime.now(datetime.timezone.utc) - bdt
+            if age > datetime.timedelta(days=14):
+                alarms.append(f"I2 ГРОБОВАЯ ТИШИНА: dosezor/heartbeat.json молчит {age.days} дн (порог 14)")
+        except Exception as e:
+            alarms.append(f"I2 ГРОБОВАЯ ТИШИНА: пульс Дозиона нечитаем ({e})")
+    else:
+        alarms.append(f"I2 ГРОБОВАЯ ТИШИНА: dosezor/heartbeat.json недоступен (HTTP {st})")
 
     st, notif = req("/notifications?per_page=100")
     unread = [n for n in notif if isinstance(n, dict) and n.get("unread")] if st == 200 and isinstance(notif, list) else []
