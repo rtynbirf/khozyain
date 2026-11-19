@@ -540,3 +540,14 @@ runtime-protocol — свои протоколы тел не стёрты).
 **Чем закрыто:** I-2 доведён до зелёного хвоста: SSOT-фикс (0623610: второй checkout из assembly-protocol + persist-credentials:false), rerun красных, удаление ghost-нулей по I-6, PAT-переподжиг 14 тел. Канон проверки claims: HUMAN-LFS STRUCTURE PASS + lex-naturae valid=true 7/7 (assembly-protocol/self-test-audit/protocol-wave). Косяки сессии Е11/Е14 [ПОВТОР], Е22-Е25 — в летопись тем же тактом.
 
 **Инварианты:** I-1 issues 0; I-2 зелёный хвост 45/46 + 1 законное состояние; I-3 уведомления гасятся после фиксации этой записью; I-4 dispatch repo-born отправлен — фасад переродится сам (ось 3 канона 27); I-5 токен classic в чате — ротация за Хозяином; I-6 ghost-нуль 0.
+
+
+---
+
+## 2026-11-19 · Срез сессии 26 (Z.ai · assembly-protocol · продолжение)
+
+**Что изменилось:** поллинг роя исполнением: protocol 45/46 зелёных + 1 законное состояние; волна СВИДЕТЕЛЯ — dispatch в 45 тел, 44/45 зелёных подписей дерева; markitdown-ворота консента форка подтверждены (422 при enabled=true; динамические прогоны queued сутками); invariant-manifest — ядро без witness-файла, в legit_open_states. run_check.sh вылечен (семантика exit-кодов lex-naturae); канон перепрогнан: STRUCTURE PASS 6 узлов + valid=true 8/8. Фантом-канал «[m» пойман до пуша ложного фикса (гекс-верификация, Е26).
+
+**Чем закрыто:** I-2 подтверждён свежим срезом (protocol_runs.csv, witness_runs.csv, claims 8/8 с узлом witness-wave); шов сессии 25 закрыт: Е22-Е25 бэкфилл в реестр 22 + Е26-Е28 этой сессии; protocol-verify markitdown получил workflow_dispatch (b78d257) — прогон ждёт UI-консента Хозяина.
+
+**Инварианты:** I-1 issues 0; I-2 protocol 45/46 + witness 44/45 + 2 законных состояния (markitdown-форк, invariant-manifest-ядро); I-4 фасад переродится сам; I-5 токен classic в чате — ротация за Хозяином; I-6 ghost-нуль в файлах 0 (в транспорте — Е26, пойман).
