@@ -1,0 +1,55 @@
+name: ХОЗЯИН · ночной обход дома
+
+on:
+  schedule:
+    - cron: "0 4 * * *"   # ежедневно 04:00 UTC — дом сверяется со средой
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: khozyain-sweep
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - name: ночной обход (замер инвариантов I1–I4 по живому API)
+        env:
+          GITHUB_TOKEN: ${{ secrets.SWARM_TOKEN }}   # рука роя: дом читается целиком
+        run: python3 scripts/khozyain_sweep.py | tee sweep_out.txt
+
+      - name: строгий приговор (REJECT при тревогах — честный красный)
+        run: |
+          if grep -q "ТРЕВОГИ" sweep_out.txt; then
+            echo "REJECT: у дома тревоги — срез выше, ремонт по ритуалу domovoy-ritual"
+            exit 1
+          fi
+          echo "ДОМ ЧИСТ: инварианты держатся"
+
+      - name: срез в летопись дома (append-only, рука роя)
+        env:
+          SWARM_TOKEN: ${{ secrets.SWARM_TOKEN }}
+        run: |
+          rm -f sweep_out.txt
+          printf '\n<!-- срез %s -->\n' "$(date -u +%FT%TZ)" >> HOUSE_STATE.md
+          python3 scripts/khozyain_sweep.py > /tmp/final_slice.txt || true
+          cat /tmp/final_slice.txt >> HOUSE_STATE.md
+          git config user.name "khozyain-machine"
+          git config user.email "machine@users.noreply.github.com"
+          git add HOUSE_STATE.md
+          if git diff --cached --quiet; then
+            echo "срез без изменений — дом в покое"
+          else
+            git commit -m "ХОЗЯИН: ночной срез $(date -u +%FT%TZ) — append-only"
+            git pull --rebase origin main
+            git push "https://x-access-token:${SWARM_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
+          fi
