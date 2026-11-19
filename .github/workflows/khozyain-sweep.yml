@@ -51,5 +51,8 @@ jobs:
           else
             git commit -m "ХОЗЯИН: ночной срез $(date -u +%FT%TZ) — append-only"
             git pull --rebase origin main
+            # волна 14: extraheader от checkout перекрывает URL-креды → 403 github-actions[bot]; снимаем в обоих скоупах
+            git config --unset-all http.https://github.com/.extraheader || true
+            git config --worktree --unset-all http.https://github.com/.extraheader 2>/dev/null || true
             git push "https://x-access-token:${SWARM_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
           fi
