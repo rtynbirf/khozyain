@@ -1,3 +1,9 @@
+<div align="center">
+
+<a href="https://github.com/rtynbirf/khozyain"><img src="banner.png" width="100%" alt="khozyain — штандарт мастерской в каноне ORNAMENTAL MYTHO-REALISM"></a>
+
+</div>
+
 # ХОЗЯИН ДОМА
 
 <div align="center">
@@ -19,7 +25,7 @@
 
 | ФАЙЛОВ | ПАПОК | КОММИТОВ | ОБНОВЛЕНО | РЕЛИЗОВ |
 |---:|---:|---:|---|---:|
-| 31 | 6 | 164 | 2026-11-19 | 0 |
+| 31 | 6 | 165 | 2026-11-19 | 0 |
 <!--ФОРЖ:ПАСПОРТ:КОНЕЦ-->
 
 
