@@ -654,3 +654,14 @@ witness 46/47 зелёных, 0 красных; markitdown — ворота 422 
 **Инварианты:** I-1 issues 0; I-2 страж роя: PASS 45 + GATED-LEGAL 1 (markitdown);
 I-6 ghost-нуль 0; I-5 токен: присланный ключ уже в .tok, живая проба зелёная, отзыв
 старого за Хозяином.
+
+
+---
+
+## Дополнение к срезу №5 · волна-13б (2026-11-19 вечер) — «ИНТЕГРИРУЙ ВСЁ У НАС»
+
+1. **Витринный доктор встал в дом:** `repo-doctrine/scripts/vitrina_doctor.py` — FSM SCAN→DIFF→APPLY→VERIFY→REPORT(+LLMS-GEN), идемпотентен, токен только env. APPLY 4/4 (топики новорожденных: assembly-protocol, dogovor, lfs-core, repo-seed), VERIFY 4/4. CI repo-doctrine на пуш — все success.
+2. **Дверь агентов жива:** `https://rtynbirf.github.io/llms.txt` — карта всех 77 тел (47 живых + архив, 23 827 б, автоген из живого API), живая проба HTTP 200; мембрана плеера перелегла в `llms-player.txt` байт-в-байт без изменений.
+3. **ГЕНОМ 0.2.14 — прирост 14 → 20 клеток:** code (substrate) · invariant-manifest (overseer) · karta (genome) · kb (memory) · lfs-core (overseer) · repo-seed (substrate). Двойной ремонт: пины всех 20 от живого HEAD (singulyar по pin_ref=rumu), integrity sha256(utf8(pin)) пересчитана 20/20 — заноза «make pins integrity не пересчитывает» закрыта (дерево отстало: пины 14/14 дрейфанули после 0.2.7, integrity 0/14). Канон `81ecd392`, релиз `genom-v0.2.14` (draft→asset→publish, swarm.json uploaded, байт-в-байт). MANIFEST/peer-manifest/grants — жанр родного конвейера make, не подделаны (честно); cards_seals не тронуто — жанр пломбира.
+4. **Лицо:** блок «ГЕНОМ РОЯ · 20 КЛЕТОК» на каноне `81ecd392`.
+5. **Временная дверь:** крон-дозорный-3 job 538675, one_time 2026-11-22 09:30 МСК (дельта против волны-12: 58 985 клонов / 75 клеток).
