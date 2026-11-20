@@ -1,0 +1,412 @@
+{
+ "лента": "SWARM_TAPE",
+ "версия": "v1.0",
+ "utc": "2026-11-20T09:34:14Z",
+ "репо_всего": 77,
+ "вердикты": {
+  "LIVE": 45,
+  "NO_WORKFLOW": 31,
+  "NO_RUNS": 1
+ },
+ "записи": [
+  {
+   "repo": ".github",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "agryp",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "assembly-protocol",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "cell-rs",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "cell-swarm",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "cell65-host",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "code",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "combain-v2",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "commons",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "dogovor",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "domovenok",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "domovoy",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "domovoy-ritual",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "domovoy-tweaker",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "door-zero",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "edinyy-svod",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "ekonomika",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "ekspozicii",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "fond-host",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "free-man",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "github-doctrine",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "github-runbook",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "global-video-platforms-registry",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "H-PE11-PHOENIX",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "hologram",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "index",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "invariant-manifest",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "karaoke-dream",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "karta",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "kb",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "khozyain",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "language-through-the-ages",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "lean-canon",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "lex-naturae",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "lfs-core",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "linguistic-code",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "markitdown",
+   "workflow": "есть",
+   "вердикт": "NO_RUNS"
+  },
+  {
+   "repo": "neutral-browser",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "nous",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "os-forge",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "polimat-hub",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "polimat-task174",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "polymat-hive",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "polymath-atlas",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "POLYMATH-ATLAS-GESTALT-CANON",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "polymath-atlas-v107",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "polymath-core",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "polymath-gen",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "polymath-multiagent",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "polymath-os",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "polymath-stckg-core",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "polymath-tools-atlas",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "red-thread-debt-audit",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "release-vault",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "rent-mechanism-q43",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "repo-doctrine",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "repo-seed",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "revo",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "rtynbirf",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "rtynbirf.github.io",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "rumu",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "runtime-protocol",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "ruvson",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "ruvson-lyrics",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "ruvson-rse2",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "singulyar",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "singulyar-a0-audit",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "singulyar-llm",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "task-graph-propagator",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "uace",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "uace-pml",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "uace-polymat",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "universal-agent",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "voice-atlas-llm",
+   "workflow": "есть",
+   "последний_прогон": "completed/success",
+   "вердикт": "LIVE"
+  },
+  {
+   "repo": "web-evolution-1991-2026",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "windows-chronicle",
+   "вердикт": "NO_WORKFLOW"
+  },
+  {
+   "repo": "yazyk-skvoz-epohi",
+   "вердикт": "NO_WORKFLOW"
+  }
+ ]
+}

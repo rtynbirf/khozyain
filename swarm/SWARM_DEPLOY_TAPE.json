@@ -1,0 +1,399 @@
+{
+ "лента": "SWARM_DEPLOY_TAPE",
+ "версия": "v1.0",
+ "utc": "2026-11-20T09:32:21Z",
+ "репо_всего": 77,
+ "вердикты": {
+  "SKIP-IDENTICAL": 46,
+  "ARCHIVED": 30,
+  "SKIP-SSOT": 1
+ },
+ "записи": [
+  {
+   "repo": ".github",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "agryp",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "assembly-protocol",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "cell-rs",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "cell-swarm",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "cell65-host",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "code",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "combain-v2",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "commons",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "dogovor",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "domovenok",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "domovoy",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "domovoy-ritual",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "domovoy-tweaker",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "door-zero",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "edinyy-svod",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "ekonomika",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "ekspozicii",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "fond-host",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "free-man",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "github-doctrine",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "github-runbook",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "global-video-platforms-registry",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "H-PE11-PHOENIX",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "hologram",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "index",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "invariant-manifest",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "karaoke-dream",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "karta",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "kb",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "khozyain",
+   "ветка": "main",
+   "вердикт": "SKIP-SSOT"
+  },
+  {
+   "repo": "language-through-the-ages",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "lean-canon",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "lex-naturae",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "lfs-core",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "linguistic-code",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "markitdown",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "neutral-browser",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "nous",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "os-forge",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "polimat-hub",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "polimat-task174",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "polymat-hive",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "polymath-atlas",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "POLYMATH-ATLAS-GESTALT-CANON",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "polymath-atlas-v107",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "polymath-core",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "polymath-gen",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "polymath-multiagent",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "polymath-os",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "polymath-stckg-core",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "polymath-tools-atlas",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "red-thread-debt-audit",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "release-vault",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "rent-mechanism-q43",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "repo-doctrine",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "repo-seed",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "revo",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "rtynbirf",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "rtynbirf.github.io",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "rumu",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "runtime-protocol",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "ruvson",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "ruvson-lyrics",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "ruvson-rse2",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "singulyar",
+   "ветка": "rumu",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "singulyar-a0-audit",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "singulyar-llm",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "task-graph-propagator",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "uace",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "uace-pml",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "uace-polymat",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "universal-agent",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "voice-atlas-llm",
+   "ветка": "main",
+   "вердикт": "SKIP-IDENTICAL"
+  },
+  {
+   "repo": "web-evolution-1991-2026",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "windows-chronicle",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  },
+  {
+   "repo": "yazyk-skvoz-epohi",
+   "ветка": "main",
+   "вердикт": "ARCHIVED"
+  }
+ ],
+ "подпись": "86763bd92b241c7a5149e5e68cbbdffe96f4f14afe4eaf1b18bc77aefa74202a"
+}
