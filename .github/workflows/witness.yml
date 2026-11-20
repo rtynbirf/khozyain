@@ -1,0 +1,31 @@
+name: witness
+on:
+  workflow_call:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  witness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # дерево вызывателя (или самого khozyain при прямом запуске)
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      # SSOT: механизм достаётся из khozyain, не из вызывающего репо (канон дома)
+      - name: SSOT · автомат свидетеля
+        uses: actions/checkout@v4
+        with:
+          repository: rtynbirf/khozyain
+          ref: main
+          path: witness-src
+          persist-credentials: false
+      - name: СВИДЕТЕЛЬ РОЯ · конечный автомат
+        run: python3 witness-src/witness/witness_fsm.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: witness
+          path: WITNESS.json

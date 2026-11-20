@@ -1,0 +1,29 @@
+name: swarm-status
+on:
+  schedule:
+    - cron: "37 3 * * *"  # ежедневно: счёт роя без человека
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: СЧЁТ РОЯ · все репо аккаунта
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/swarm_status.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: swarm
+          path: |
+            SWARM_TAPE.json
+            SWARM_REPORT.md
+      - name: СВОДКА В РАН
+        if: always()
+        run: |
+          if [ -f SWARM_REPORT.md ]; then cat SWARM_REPORT.md >> "$GITHUB_STEP_SUMMARY"; fi
