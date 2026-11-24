@@ -44,10 +44,13 @@ def api(method, url, body=None, token=None):
 def all_repos(token):
     repos, page = [], 1
     while True:
+        st, chunk = 200, []
         if token:
             st, chunk = api("GET", f"{API}/user/repos?affiliation=owner&visibility=all&per_page=100&page={page}", token=token)
-        else:
-            st, chunk = api("GET", f"{API}/users/{OWNER}/repos?per_page=100&page={page}")
+        if st != 200:
+            # GITHUB_TOKEN репо-скопирован: /user/repos даёт 403 без user-контекста.
+            # Дом публичен — витрина перечисляется тем же токеном (рана #3, 2026-11-24).
+            st, chunk = api("GET", f"{API}/users/{OWNER}/repos?type=owner&per_page=100&page={page}", token=token)
         if st != 200:
             raise SystemExit("перечисление репо не прошло: HTTP " + str(st))
         repos += chunk
@@ -68,6 +71,10 @@ def status_repo(name, token):
     rep["workflow"] = "есть"
     st2, wlist = api("GET", f"{API}/repos/{OWNER}/{name}/actions/workflows?per_page=100", token=token)
     run_done = False
+    if st2 == 403:
+        # честный вердикт вместо тихого NO_RUNS: руку не пустили — это видно, а не спрятано
+        rep["вердикт"] = "UNREACHABLE:403"
+        return rep
     if st2 == 200:
         for w in wlist.get("workflows", []):
             if w.get("path") == PATH:

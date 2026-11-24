@@ -14,6 +14,14 @@ concurrency:
 
 jobs:
   sweep:
+    # Клетка A (2026-11-24, слияние 4 клеток): срез пишется рукой самого репо
+    # (GITHUB_TOKEN, job contents:write) — мёртвая SWARM_TOKEN больше не убивает
+    # летопись. Замер I1–I3 идёт по публичной витрине дома (все тела публичны);
+    # I4 (уведомления) честно помечается «не измерен», если рука без
+    # user-контекста — ложный «0» запрещён. pipefail: замер, упавший с трейсбеком,
+    # больше не может притворяться зелёным через tee (рана #6).
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
@@ -24,8 +32,10 @@ jobs:
 
       - name: ночной обход (замер инвариантов I1–I4 по живому API)
         env:
-          GITHUB_TOKEN: ${{ secrets.SWARM_TOKEN }}   # рука роя: дом читается целиком
-        run: python3 scripts/khozyain_sweep.py | tee sweep_out.txt
+          GH_TOKEN: ${{ secrets.SWARM_TOKEN || github.token }}   # тонкая рука роя, если Хозяин выдаст; иначе рука репо
+        run: |
+          set -o pipefail
+          python3 scripts/khozyain_sweep.py | tee sweep_out.txt
 
       - name: строгий приговор (REJECT при тревогах — честный красный)
         run: |
@@ -35,9 +45,9 @@ jobs:
           fi
           echo "ДОМ ЧИСТ: инварианты держатся"
 
-      - name: срез в летопись дома (append-only, рука роя)
+      - name: срез в летопись дома (append-only, рука репо)
         env:
-          SWARM_TOKEN: ${{ secrets.SWARM_TOKEN }}
+          PUSH_TOKEN: ${{ secrets.SWARM_TOKEN || github.token }}
         run: |
           rm -f sweep_out.txt
           printf '\n<!-- срез %s -->\n' "$(date -u +%FT%TZ)" >> HOUSE_STATE.md
@@ -51,8 +61,8 @@ jobs:
           else
             git commit -m "ХОЗЯИН: ночной срез $(date -u +%FT%TZ) — append-only"
             git pull --rebase origin main
-            # волна 14: extraheader от checkout перекрывает URL-креды → 403 github-actions[bot]; снимаем в обоих скоупах
+            # волна 14: extraheader от checkout перекрывает URL-креды → снимаем в обоих скоупах
             git config --unset-all http.https://github.com/.extraheader || true
             git config --worktree --unset-all http.https://github.com/.extraheader 2>/dev/null || true
-            git push "https://x-access-token:${SWARM_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
+            git push "https://x-access-token:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
           fi

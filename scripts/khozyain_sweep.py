@@ -14,8 +14,12 @@ import base64, datetime, json, os, re, sys, urllib.request, urllib.error
 from urllib.parse import quote as _q
 
 API = "https://api.github.com"
-HDR = {"Authorization": f"token {os.environ['GH_TOKEN']}",
-       "Accept": "application/vnd.github+json", "User-Agent": "khozyain-sweep"}
+# Клетка A (2026-11-24): рука может быть тонкой (SWARM_TOKEN) или рукой репо
+# (GITHUB_TOKEN) — витрина дома публична, токен поднимает лимиты, не права.
+GH_TOKEN = os.environ.get("GH_TOKEN", "")
+HDR = {"Accept": "application/vnd.github+json", "User-Agent": "khozyain-sweep"}
+if GH_TOKEN:
+    HDR["Authorization"] = f"token {GH_TOKEN}"
 
 
 def req(path, _tries=3):
@@ -56,7 +60,15 @@ def main():
     alarms, notes = [], []
 
     st, repos = req("/user/repos?per_page=100&affiliation=owner,collaborator")
-    own = [r for r in repos if not r["fork"] and not r["archived"]] if isinstance(repos, list) else []
+    if st != 200:
+        # рука репо (GITHUB_TOKEN) не имеет user-контекста — дом публичен:
+        # полная витрина даёт /users/<owner>/repos (токен = лимиты, не права)
+        st, repos = req("/users/rtynbirf/repos?type=owner&per_page=100")
+    if st != 200 or not isinstance(repos, list):
+        sys.exit(f"РУКА НЕ ВИДИТ ДОМ: перечисление HTTP {st} — честный красный вместо пустого замера")
+    own = [r for r in repos if not r["fork"] and not r["archived"]]
+    if len(own) < 10:
+        sys.exit(f"РУКА ВИДИТ {len(own)} РЕПО ИЗ ~80: подозрительно мало — честный красный вместо слепого замера")
     print(f"ДОМ: {len(own)} живых репо (без fork/архив)")
 
     for r in own:
@@ -128,10 +140,15 @@ def main():
         alarms.append(f"I2 ГРОБОВАЯ ТИШИНА: dosezor/heartbeat.json недоступен (HTTP {st})")
 
     st, notif = req("/notifications?per_page=100")
-    unread = [n for n in notif if isinstance(n, dict) and n.get("unread")] if st == 200 and isinstance(notif, list) else []
-    if unread:
-        alarms.append(f"I4 UNREAD_NOTIFICATION: {len(unread)}")
-    notes.append(f"непрочитанных уведомлений: {len(unread)}")
+    if st == 200:
+        unread = [n for n in notif if isinstance(n, dict) and n.get("unread")] if isinstance(notif, list) else []
+        if unread:
+            alarms.append(f"I4 UNREAD_NOTIFICATION: {len(unread)}")
+        notes.append(f"непрочитанных уведомлений: {len(unread)}")
+    else:
+        # рука без user-контекста не видит уведомления: честное «не измерено»,
+        # не ложный ноль (раньше 403 молча печатался как «0»)
+        notes.append(f"I4 НЕ ИЗМЕРЕН: /notifications HTTP {st} — слепая зона этой руки, не «0»")
 
     print("\n".join(notes))
     if alarms:
