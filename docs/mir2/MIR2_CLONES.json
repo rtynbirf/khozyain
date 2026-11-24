@@ -1,0 +1,843 @@
+{
+ "ts_utc": "2026-11-24T01:36Z",
+ "sentinels": {
+  "begin": 1,
+  "end": 1
+ },
+ "canon_AGENTS.md": {
+  "nums": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42
+  ],
+  "rule37": "**КАНОН-ПАТЧ.** Правка канона формируется диф-артефактом (готовые файлы + diff),"
+ },
+ "canon_ТРЕБОВАНИЯ-ДЛЯ-АГЕНТОВ.md": {
+  "nums": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "rule37": null
+ },
+ "wf_secrets": {
+  "rtynbirf.github.io": {
+   "dom-avtomat.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "17 4 * * 1"
+    ]
+   },
+   "inv-witness.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "13 2 * * 1"
+    ]
+   },
+   "revo-obhod.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "30 5 * * 1"
+    ]
+   },
+   "self-heal.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": []
+   }
+  },
+  "singulyar-a0-audit": {
+   "dom-avtomat.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "17 4 * * 1"
+    ]
+   },
+   "inv-witness.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "2 2 * * 1"
+    ]
+   },
+   "revo-obhod.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "30 5 * * 1"
+    ]
+   }
+  },
+  "rtynbirf": {
+   "3d-contrib.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "40 3 * * *"
+    ]
+   },
+   "dom-avtomat.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "17 4 * * 1"
+    ]
+   },
+   "inv-witness.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "46 2 * * 1"
+    ]
+   },
+   "neofetch-card.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "50 4 * * *"
+    ]
+   },
+   "numbers-canon.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "10 4 * * *"
+    ]
+   },
+   "pulse.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "*/30 * * * *"
+    ]
+   },
+   "revo-account.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "0 6 * * 1"
+    ]
+   },
+   "revo-obhod.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "30 5 * * 1"
+    ]
+   },
+   "revomat-central.yml": {
+    "secrets": [
+     "REVO_PAT"
+    ],
+    "github_token": true,
+    "cron": [
+     "*/15 * * * *",
+     "9 4 * * *"
+    ]
+   },
+   "self-heal.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": []
+   },
+   "serdtse-takta.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "23 * * * *"
+    ]
+   },
+   "snake.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "0 3 * * *"
+    ]
+   },
+   "swarm-health.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "41 4 * * 1"
+    ]
+   },
+   "swarm-sync.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "17 3 * * *"
+    ]
+   },
+   "zakonodatel.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": []
+   },
+   "zavodnoy-klyuch.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": []
+   }
+  },
+  "lex-naturae": {
+   "dom-avtomat.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "17 4 * * 1"
+    ]
+   },
+   "inv-witness.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "21 2 * * 1"
+    ]
+   },
+   "revo-obhod.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "30 5 * * 1"
+    ]
+   }
+  },
+  "polymath-os": {
+   "blood.yml": {
+    "secrets": [
+     "CELL_SWARM_DISPATCH_TOKEN"
+    ],
+    "github_token": false,
+    "cron": []
+   },
+   "ci.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": []
+   },
+   "dom-avtomat.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "17 4 * * 1"
+    ]
+   },
+   "hive-alarm.yml": {
+    "secrets": [
+     "HIVE_ALARM_TOKEN"
+    ],
+    "github_token": false,
+    "cron": [
+     "40 5 * * *"
+    ]
+   },
+   "inv-witness.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "19 2 * * 1"
+    ]
+   },
+   "labels.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": []
+   },
+   "living-shield.yml": {
+    "secrets": [
+     "GITHUB_TOKEN",
+     "LIVING_SHIELD_TOKEN",
+     "PULSE_SIGNING_KEY"
+    ],
+    "github_token": true,
+    "cron": [
+     "17 3 * * 0"
+    ]
+   },
+   "red-sentinel.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "31 5 * * *"
+    ]
+   },
+   "release.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": []
+   },
+   "revo-obhod.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "30 5 * * 1"
+    ]
+   },
+   "self-audit.yml": {
+    "secrets": [
+     "GITHUB_TOKEN",
+     "PULSE_SIGNING_KEY"
+    ],
+    "github_token": true,
+    "cron": [
+     "17 4 * * 1"
+    ]
+   },
+   "self-heal.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": []
+   },
+   "tofu.yml": {
+    "secrets": [
+     "SOPS_AGE_KEY",
+     "sops",
+     "yaml"
+    ],
+    "github_token": false,
+    "cron": []
+   },
+   "wave3-dora.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "0 3 1 1,4,7,10 *"
+    ]
+   }
+  },
+  "repo-doctrine": {
+   "agentic-pilot.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "37 4 * * 1"
+    ]
+   },
+   "dom-avtomat.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "17 4 * * 1"
+    ]
+   },
+   "inv-witness.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "10 2 * * 1"
+    ]
+   },
+   "judge.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "23 4 * * *"
+    ]
+   },
+   "pin-drift-watch.yml": {
+    "secrets": [
+     "W3_PAT"
+    ],
+    "github_token": true,
+    "cron": [
+     "37 3 * * 6"
+    ]
+   },
+   "pr-target-guard.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "21 3 2,16 * *"
+    ]
+   },
+   "revo-obhod.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "30 5 * * 1"
+    ]
+   },
+   "wave3-door-lint.yml": {
+    "secrets": [
+     "W3_PAT"
+    ],
+    "github_token": true,
+    "cron": [
+     "17 4 * * *"
+    ]
+   },
+   "wave3-dpr-grader.yml": {
+    "secrets": [
+     "W3_PAT"
+    ],
+    "github_token": true,
+    "cron": []
+   },
+   "wave6-t17-manifest-freshness.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": []
+   },
+   "wf-lint.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "37 4 * * 1"
+    ]
+   }
+  },
+  "karta": {
+   "dom-avtomat.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "17 4 * * 1"
+    ]
+   },
+   "inv-witness.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "47 2 * * 1"
+    ]
+   },
+   "karta-nightly.yml": {
+    "secrets": [
+     "GITHUB_TOKEN",
+     "KARTA_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "21 3 * * *"
+    ]
+   },
+   "revo-obhod.yml": {
+    "secrets": [],
+    "github_token": true,
+    "cron": [
+     "30 5 * * 1"
+    ]
+   },
+   "sverka-reminder.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "11 4 1 1,4,7,10 *"
+    ]
+   },
+   "universe-bundle.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "43 2 1 * *"
+    ]
+   },
+   "vyzhivanie.yml": {
+    "secrets": [
+     "GITHUB_TOKEN"
+    ],
+    "github_token": true,
+    "cron": [
+     "41 4 1 1,4,7,10 *"
+    ]
+   }
+  }
+ },
+ "svg_rtynbirf": {
+  "total": 45,
+  "ok": 0,
+  "violations": [
+   {
+    "file": "revo-account.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "forge-divider.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "repo-muse.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "revo-page.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/github-contribution-grid-snake.svg",
+    "title": false,
+    "desc": true,
+    "role": false
+   },
+   {
+    "file": "assets/forge-cell-roy.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/trophy-shelf.svg",
+    "title": false,
+    "desc": false,
+    "role": true
+   },
+   {
+    "file": "assets/forge-spawn.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-qr.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-cell-langs.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-grid.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-cell-crucible.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-divider.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-pid1.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-pulse.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/footer.svg",
+    "title": false,
+    "desc": false,
+    "role": true
+   },
+   {
+    "file": "assets/forge-hero.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-now.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-city.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/hero.svg",
+    "title": false,
+    "desc": false,
+    "role": true
+   },
+   {
+    "file": "assets/forge-emberline.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-cell-boot.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/atlas-territory.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-swarm.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-cell-medallion.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/inv-forehead.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-manifest.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-musa.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-cell-ledger.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/swarm-orbit.svg",
+    "title": false,
+    "desc": false,
+    "role": true
+   },
+   {
+    "file": "assets/forge-map.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/neofetch.svg",
+    "title": false,
+    "desc": false,
+    "role": true
+   },
+   {
+    "file": "assets/forge-cell-seal.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/forge-cell-flame.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "assets/divider.svg",
+    "title": false,
+    "desc": false,
+    "role": true
+   },
+   {
+    "file": "profile-3d-contrib/profile-green-animate.svg",
+    "title": true,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "profile-3d-contrib/profile-gitblock.svg",
+    "title": true,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "profile-3d-contrib/profile-night-green.svg",
+    "title": true,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "profile-3d-contrib/profile-south-season-animate.svg",
+    "title": true,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "profile-3d-contrib/profile-night-view.svg",
+    "title": true,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "profile-3d-contrib/profile-night-rainbow.svg",
+    "title": true,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "profile-3d-contrib/profile-season-animate.svg",
+    "title": true,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "profile-3d-contrib/profile-green.svg",
+    "title": true,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "profile-3d-contrib/profile-season.svg",
+    "title": true,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "profile-3d-contrib/profile-south-season.svg",
+    "title": true,
+    "desc": false,
+    "role": false
+   }
+  ]
+ },
+ "svg_rtynbirf.github.io": {
+  "total": 3,
+  "ok": 0,
+  "violations": [
+   {
+    "file": "forge-divider.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "repo-muse.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   },
+   {
+    "file": "revo-page.svg",
+    "title": false,
+    "desc": false,
+    "role": false
+   }
+  ]
+ }
+}
