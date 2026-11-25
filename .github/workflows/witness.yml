@@ -12,12 +12,12 @@ jobs:
     timeout-minutes: 5
     steps:
       # дерево вызывателя (или самого khozyain при прямом запуске)
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
       # SSOT: механизм достаётся из khozyain, не из вызывающего репо (канон дома)
       - name: SSOT · автомат свидетеля
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: rtynbirf/khozyain
           ref: main
