@@ -25,7 +25,7 @@ jobs:
           persist-credentials: false
       - name: СВИДЕТЕЛЬ РОЯ · конечный автомат
         run: python3 witness-src/witness/witness_fsm.py
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: witness
           path: WITNESS.json
