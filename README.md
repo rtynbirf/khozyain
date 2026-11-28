@@ -4,12 +4,6 @@
 
 </div>
 
-# ХОЗЯИН ДОМА
-
-<div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/khozyain@main/banner.png" width="100%" alt="Штандарт khozyain: обсидиан и расплавленное золото, кузня rtynbirf" />
-</div>
-
 <!--ФОРЖ:МУЗА:НАЧАЛО-->
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/rtynbirf/khozyain@main/repo-muse.svg" width="100%" alt="Муза khozyain: мастерская ТЁРНЕР · ВИХРЬ, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
@@ -20,13 +14,33 @@
 
 <!--ФОРЖ:ПАСПОРТ:НАЧАЛО-->
 <div align="center">
-  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы khozyain в каноне ORNAMENTAL MYTHO-REALISM: орнаментальная решётка, медальон-миф, строение файлов, лексикон — по фактическому контенту" />
+  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы khozyain №32 в каноне ORNAMENTAL MYTHO-REALISM: орнаментальная решётка, медальон-миф, строение файлов, лексикон — по фактическому контенту" />
 </div>
 
 | ФАЙЛОВ | ПАПОК | КОММИТОВ | ОБНОВЛЕНО | РЕЛИЗОВ |
 |---:|---:|---:|---|---:|
-| 77 | 14 | 262 | 2026-11-28 | 0 |
+| 77 | 13 | 1 | 2026-11-28 | 1 |
 <!--ФОРЖ:ПАСПОРТ:КОНЕЦ-->
+
+# khozyain
+
+<p align="center"><img src="https://cdn.jsdelivr.net/gh/rtynbirf/khozyain@main/.github/social-preview.png" alt="khozyain" width="100%"></p>
+
+<div align="center">
+
+<a href="https://github.com/rtynbirf/khozyain"><img src="banner.png" width="100%" alt="khozyain — штандарт мастерской в каноне ORNAMENTAL MYTHO-REALISM"></a>
+
+</div>
+
+# ХОЗЯИН ДОМА
+
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/khozyain@main/banner.png" width="100%" alt="Штандарт khozyain: обсидиан и расплавленное золото, кузня rtynbirf" />
+</div>
+
+
+
+
 
 
 
